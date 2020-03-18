@@ -1,0 +1,414 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	
+}
+
+#img
+{
+	
+display:block;
+margin:auto;
+	
+}
+.nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #161d44;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.7s;
+}
+.nav a {
+	display: block;
+	padding: 20px 30px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fff;
+}
+.nav a:hover {
+	color: #ffcd46;
+	transition: 0.4s;
+	
+}
+.nav .close {
+	position: absolute;
+	top: 0;
+	right: 22px;
+	margin-left: 50px;
+	font-size: 30px
+}
+.slide a {
+	color: #000;
+	font-size: 36px;
+}
+#content {
+	padding: 20px;
+	transition: margin-left 0.7s;
+	overflow: hidden;
+	width: 100%;
+}
+$borderRadius: 10px;
+
+
+
+body
+{
+	
+	background-color: #edf0f5;
+}
+
+h4
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+}
+
+.rectangulo {
+   
+     background: #edf0f5;
+}
+
+.rectangulo h3 {
+	
+font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+color: #ce5454;
+text-align:center;
+padding-top:4px;
+margin:auto;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+
+
+h1{
+	
+	text-align: left;
+	padding:10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px,
+}
+
+
+
+
+.form-style-1 {
+
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px,
+}
+.form-style-1 li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-style-1 input[type=text], 
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-webkit-border-radius: 1em;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-style-1 input[type=text]:focus, 
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus, 
+.form-style-1 select:focus{
+	-moz-box-shadow: 0 0 8px #2866fb;
+	-webkit-box-shadow: 0 0 8px #2866fb;
+	-webkit-border-radius: 1em;
+	box-shadow: 0 0 8px #2866fb;
+	border: 1px solid #2866fb;
+}
+.form-style-1 .field-divided{
+	width: 49%;
+}
+
+
+.form-style-1 .field-long{
+	width: 100%;
+}
+.form-style-1 .field-select{
+	width: 100%;
+}
+.form-style-1 .field-textarea{
+	height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+	background: #41cd7d;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+	background: #43bb76;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	
+}
+.form-style-1 .required{
+	color:red;
+}
+
+.container {
+  margin: 5% 3%;
+}
+@media (min-width: 48em) {
+  .container {
+    margin: 2%;
+  }
+}
+@media (min-width: 75em) {
+  .container {
+    margin: 2em auto;
+    max-width: 75em;
+  }
+}
+
+
+.responsive-table {
+  width: 100%;
+  margin-bottom: 1.5em;
+
+}
+@media (min-width: 48em) {
+  .responsive-table {
+    font-size: .9em;
+  }
+}
+@media (min-width: 62em) {
+  .responsive-table {
+    font-size: 1em;
+  }
+}
+.responsive-table thead {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .responsive-table thead {
+    position: relative;
+    clip: auto;
+    height: auto;
+    width: auto;
+    overflow: auto;
+  }
+}
+.responsive-table thead th {
+  background-color: #353637;
+  border: 1px solid #353637;
+ 
+  font-weight: normal;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.responsive-table thead th:first-of-type {
+  text-align: left;
+}
+.responsive-table tbody,
+.responsive-table tr,
+.responsive-table th,
+.responsive-table td {
+  display: block;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+  
+}
+@media (min-width: 48em) {
+  .responsive-table tr {
+    display: table-row;
+  }
+}
+.responsive-table th,
+.responsive-table td {
+  padding: .5em;
+  vertical-align: middle;
+}
+
+@media (min-width: 48em) {
+  .responsive-table th,
+  .responsive-table td {
+    display: table-cell;
+    padding: .5em;
+  }
+}
+@media (min-width: 62em) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: .75em .5em;
+  }
+}
+@media (min-width: 75em) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: .75em;
+  }
+}
+.responsive-table caption {
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .responsive-table caption {
+    font-size: 1.5em;
+  }
+}
+.responsive-table tfoot {
+  font-size: .8em;
+  font-style: italic;
+}
+@media (min-width: 62em) {
+  .responsive-table tfoot {
+    font-size: .9em;
+  }
+}
+@media (min-width: 48em) {
+  .responsive-table tbody {
+    display: table-row-group;
+  }
+}
+
+@media (min-width: 48em) {
+  .responsive-table tbody tr {
+    display: table-row;
+    border-width: 1px;
+  }
+}
+.responsive-table tbody tr:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 48em) {
+  .responsive-table tbody tr:nth-of-type(even) {
+    background-color: rgba(94, 93, 82, 0.1);
+  }
+}
+.responsive-table tbody th[scope="row"] {
+  background-color: #2866fb;
+  color: white;
+}
+@media (min-width: 48em) {
+  .responsive-table tbody th[scope="row"] {
+    background-color: transparent;
+    color: #5e5d52;
+    text-align: left;
+  }
+}
+.responsive-table tbody td {
+  text-align: right;
+}
+
+@media (min-width: 48em) {
+  .responsive-table tbody td {
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media (max-width: 30em) {/* 30x16px=480px*/
+    .responsive-table{
+        width: 100%;
+        font-size: .9em;
+
+    }
+
+    .responsive-table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid grey;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .responsive-table td[data-titulo]{
+        display: flex;
+       
+        
+    }
+
+    .responsive-table td,
+    .responsive-table th{
+        border: none;
+    }
+
+    
+    .responsive-table td[data-titulo]::before{
+        content: attr(data-titulo);
+        width: 90px;
+        color: black;
+        font-weight: Bold;
+        text-align:left;
+		padding-top:4px;
+		
+  		
+       
+        
+    }
+    
+
+
+    .responsive-table thead{
+        display: none;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+package servlets;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import beans.BeanCursoJsp;
+import dao.DaoLogin;
+
+
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	
+	private DaoLogin daoLogin = new DaoLogin();
+       
+
+    public LoginServlet() {
+        super();
+       
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		
+		try {
+			
+
+
+		
+		String login =(request.getParameter("login"));
+		String pass=(request.getParameter("pass"));	
+		
+		if ( daoLogin.validarLogin(login, pass)) { // acceso  ok
+			RequestDispatcher dispatcher = request.getRequestDispatcher("accesoliberado.jsp");
+			dispatcher.forward(request, response);
+		}else { // acceso negado
+			RequestDispatcher dispatcher = request.getRequestDispatcher("accesonegado.jsp");
+			dispatcher.forward(request, response);
+			
+		}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
