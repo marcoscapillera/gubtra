@@ -7,7 +7,9 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
+	/*background:url('../img/fondo.jpg') no-repeat 0 -200px;*/
 	
+
 }
 
 #img
@@ -24,21 +26,28 @@ margin:auto;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #161d44;
+	background-color: #6a2cf3;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.7s;
+	
 }
 .nav a {
 	display: block;
 	padding: 20px 30px;
-	font-size: 14px;
+	font-size: 24px;
 	text-decoration: none;
 	color: #fff;
+	font-weight: bold;
+	
 }
 .nav a:hover {
-	color: #ffcd46;
+	color: #fff;
+	
+	background:#7b5ef2;
+	
 	transition: 0.4s;
+	
 	
 }
 .nav .close {
@@ -49,7 +58,7 @@ margin:auto;
 	font-size: 30px
 }
 .slide a {
-	color: #000;
+	color: #afb4c6;
 	font-size: 36px;
 }
 #content {
@@ -57,7 +66,11 @@ margin:auto;
 	transition: margin-left 0.7s;
 	overflow: hidden;
 	width: 100%;
+	background-image: url("resources/img/fondogubtra.png");
+	
 }
+
+
 $borderRadius: 10px;
 
 
@@ -65,13 +78,19 @@ $borderRadius: 10px;
 body
 {
 	
-	background-color: #edf0f5;
+	
+	
 }
 
-h4
+.sub-titulo
 {
+	width:100%;
+	height:15%:
 	font-family: 'Montserrat', sans-serif;
-	font-size: 48px;
+	font-size: 24px;
+	padding-top:40px;
+	color:#565454;
+	text-align: center;
 }
 
 .rectangulo {
@@ -93,32 +112,48 @@ margin:auto;
 
 h1{
 	
-	text-align: left;
+	
 	padding:10px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 48px,
+	font-size: 24px;
+	text-align: center;
 }
 
 
+ 
+  .card  {
+    padding: 40px;
+    background: #fff;
+    max-width: 560px;
+    border-radius: 20px;
+    margin: 15px auto;
+    text-align: center;
+   
+    
+    
+  }
+  
+  
 
+  
+  .shadow1 { 
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+  }
 
 .form-style-1 {
 
 	font-family: 'Montserrat', sans-serif;
-	font-size: 14px,
+	font-size: 14px;
+	
 }
 .form-style-1 li {
 	padding: 0;
 	display: block;
 	list-style: none;
 	margin: 10px 0 0 0;
+	
 }
-.form-style-1 label{
-	margin:0 0 3px 0;
-	padding:0px;
-	display:block;
-	font-weight: bold;
-}
+
 .form-style-1 input[type=text], 
 .form-style-1 input[type=date],
 .form-style-1 input[type=datetime],
@@ -129,10 +164,11 @@ h1{
 .form-style-1 input[type=email],
 textarea, 
 select{
+	background-color:#edf0f5;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border:1px solid #BEBEBE;
+	border:1px solid #edf0f5;
 	padding: 7px;
 	margin:0px;
 	-webkit-transition: all 0.30s ease-in-out;
@@ -173,21 +209,72 @@ select{
 	height: 100px;
 }
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
-	background: #41cd7d;
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+-moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+display:block;
+width:100%;
+padding:10px;
+box-sizing:border-box;
+margin:2px solid #ccc;
+border-radius: 25px;
+outline: none;
+color:white;
+background-color:#8600f6;
+box-shadow: none;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-	background: #43bb76;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
-	
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+-moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+display:block;
+width:100%;
+padding:10px;
+box-sizing:border-box;
+margin:2px solid #ccc;
+border-radius: 25px;
+outline: none;
+color:white;
+background-color:#8600f6;
+box-shadow: none;
 }
 .form-style-1 .required{
 	color:red;
 }
+
+
+  .card  {
+    padding: 40px;
+    background: #fff;
+    max-width: 560px;
+    border-radius:10px;
+    margin: 15px auto;
+    text-align: center;
+    
+  }
+
+
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
 
 .container {
   margin: 5% 3%;
@@ -207,9 +294,40 @@ select{
 
 .responsive-table {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5em;  
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  max-width:1800px; 
+  width:100%;
+  margin:0 auto;
+  position:relative;
+  color:#838383;
 
+  *               { position:relative }
+  
+  td,th           { padding-left:8px}
+
+  thead tr        { 
+    height:60px;
+    background:#FFED86;
+    font-size:16px;
+  }
+  
+  tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;
+    &:last-child  { border:0; }
+  }
+  
+ 	td,th 					{ text-align:left;
+		&.l 					{ text-align:right }
+		&.c 					{ text-align:center }
+		&.r 					{ text-align:center }
+	}
 }
+
+  
 @media (min-width: 48em) {
   .responsive-table {
     font-size: .9em;
@@ -226,10 +344,11 @@ select{
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
-  border: 0;
+  
   height: 1px;
   width: 1px;
   overflow: hidden;
+  
 }
 @media (min-width: 48em) {
   .responsive-table thead {
@@ -241,13 +360,13 @@ select{
   }
 }
 .responsive-table thead th {
-  background-color: #353637;
-  border: 1px solid #353637;
- 
-  font-weight: normal;
+  background-color: #7d2fef;
+  font-weight: bold;
   text-align: center;
   color: white;
+  
 }
+
 
 
 
@@ -263,6 +382,7 @@ select{
   padding: 0;
   text-align: left;
   white-space: normal;
+  
   
 }
 @media (min-width: 48em) {
@@ -300,6 +420,7 @@ select{
   font-size: 1em;
   font-weight: bold;
   text-align: center;
+  color:#565454;
 }
 @media (min-width: 48em) {
   .responsive-table caption {
@@ -324,7 +445,7 @@ select{
 @media (min-width: 48em) {
   .responsive-table tbody tr {
     display: table-row;
-    border-width: 1px;
+    
   }
 }
 .responsive-table tbody tr:last-of-type {
@@ -332,12 +453,15 @@ select{
 }
 @media (min-width: 48em) {
   .responsive-table tbody tr:nth-of-type(even) {
-    background-color: rgba(94, 93, 82, 0.1);
+    background-color: rgba(249, 244, 255, 1);
+    color:#838383;
+    font-weight: bold;
   }
 }
 .responsive-table tbody th[scope="row"] {
   background-color: #2866fb;
-  color: white;
+  color: #838383;
+  font-weight: bold;
 }
 @media (min-width: 48em) {
   .responsive-table tbody th[scope="row"] {
@@ -370,7 +494,7 @@ select{
     .responsive-table tr{
         display: flex;
         flex-direction: column;
-        border: 1px solid grey;
+        
         padding: 1em;
         margin-bottom: 1em;
     }

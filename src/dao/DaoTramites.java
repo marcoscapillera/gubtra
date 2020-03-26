@@ -25,11 +25,17 @@ public class DaoTramites {
 
 		try {
 
-			String sql = "INSERT INTO tramites (tramite,fecha, costo) VALUES (?, ?, ?)";
+			String sql = "INSERT INTO tramites (tramite,fecha, hora,costo, fotobase64, contenttype, direccion) VALUES (?, ?, ?, ?, ?, ?,?)";
 			PreparedStatement insert = connection.prepareStatement(sql);
 			insert.setString(1, tramites.getTramite());
 			insert.setString(2, tramites.getFecha());
-			insert.setString(3, tramites.getCosto());
+			insert.setString(3, tramites.getHora());
+			insert.setString(4, tramites.getCosto());
+			insert.setString(5, tramites.getFotoBase64());
+			insert.setString(6, tramites.getContentType());
+			insert.setString(7, tramites.getDir());
+			
+			
 			insert.execute();
 			connection.commit();
 			System.out.println("Todo correcto, salvando datos");
@@ -63,6 +69,11 @@ public class DaoTramites {
 			beanTramites.setTramite(resultSet.getString("tramite"));
 			beanTramites.setFecha(resultSet.getString("fecha"));
 			beanTramites.setCosto(resultSet.getString("costo"));
+			beanTramites.setHora(resultSet.getString("hora"));
+			beanTramites.setDir(resultSet.getString("direccion"));
+			beanTramites.setFotoBase64(resultSet.getString("fotobase64"));
+			beanTramites.setContentType(resultSet.getString("contenttype"));
+			
 			
 
 			listar.add(beanTramites);
@@ -114,6 +125,11 @@ public class DaoTramites {
 			beanTramites.setTramite(resultSet.getString("tramite"));
 			beanTramites.setFecha(resultSet.getString("fecha"));
 			beanTramites.setCosto(resultSet.getString("costo"));
+			beanTramites.setHora(resultSet.getString("hora"));
+			beanTramites.setDir(resultSet.getString("direccion"));
+			beanTramites.setFotoBase64(resultSet.getString("fotobase64"));
+			beanTramites.setContentType(resultSet.getString("contenttype"));
+			
 
 
 			return beanTramites;
@@ -127,11 +143,15 @@ public class DaoTramites {
 
 		try {
 
-			String sql = "update tramites set tramite = ?, fecha= ?, costo=? where id= " + tramites.getId();
+			String sql = "update tramites set tramite = ?, fecha= ?,costo=?, hora=?, direccion=?  where id= " + tramites.getId();
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, tramites.getTramite());
 			preparedStatement.setString(2, tramites.getFecha());
 			preparedStatement.setString(3, tramites.getCosto());
+			preparedStatement.setString(4, tramites.getHora());
+			preparedStatement.setString(5, tramites.getDir());
+			
+			
 			preparedStatement.execute();
 			connection.commit();
 

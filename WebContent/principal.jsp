@@ -10,52 +10,32 @@
     <link rel="stylesheet" href="resources/css/style.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">GubTra</span> Soluciones a tus trámites</h1>
-        </div>
-        <nav>
-          <ul>
-            <li class="current"><a href="home.jsp">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section id="showcase">
-      <div class="container">
-      	
-        <h1>Gestor de Trámites y Vencimientos</h1>
-        
-        <p></p>
-      </div>
-    </section>
-
+ 	   <!-- Navbar items -->
+    	<div id="navlist"> 
+        <a href="#">Salir</a> 
+        <a href="#">Sobre Nosotros</a> 
+        <a href="#">Sitio</a> 
+        <a href="#">Instructivo</a> 
+        <a href="#">Contacto</a> 
+          
+        <!-- seach bar right align -->
+        <div class="search"> 
+            <form action="#"> 
+                <input type="text"
+                    placeholder=" Buscar Trámites"
+                    name="search"> 
+                <button> 
+                    <i class="fa fa-search"
+                        style="font-size: 18px;"> 
+                    </i> 
+                </button> 
+            </form> 
+        </div> 
+    </div>
+    
+    <br><br><br><br>
+    
  
-
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="resources/img/bot.png">
-          <h3>Asistente Personal</h3>
-          <p>Hola ! En que trámite puedo ayudarte ?</p>
-        </div>
-        <div class="box">
-          <img src="resources/img/contact.png">
-          <h3>Contacto</h3>
-          <p>Aceptamos sugerencias</p>
-        </div>
-        <div class="box">
-          <a title="Tramites en linea" href="https://www.gub.uy/" target="_blank"><img src="resources/img/online.png"></a>
-          <h3>Trámites en línea</h3>
-          <p>Portal oficial del gobierno para realizar sus trámites</p>
-        </div>
-      </div>
-    </section>
-
 
   </body>
 </html>

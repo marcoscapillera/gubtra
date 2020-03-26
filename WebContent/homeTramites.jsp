@@ -35,16 +35,16 @@
 		<div id="menu" class="nav">
 			<a href="#" class="close" onclick="closeSlideMenu()"> <i
 				class="fas fa-times"></i>
-			</a> <img id="img" alt="" src="resources/img/logoSello.png" width=150px height=48px> 
+			</a> <br><br><img id="img" alt="" src="resources/img/logoSello.png" width=150px height=48px> 
 				<a href="index.jsp">Home</a>
 				<a href="#about">About</a>
-				<a href="homeTramites.jsp">Trámites</a>
+				<a href="salvarTramites?accion=listartodos">Trámites</a>
 			 	<a href="#facturas">Facturas</a> 
 			 	<a href="#documentos">Documentos</a> 
 				<a href="#arhivos">Archivos</a>
 		</div>
 
-
+		
 		<section id="tramites">
 		<br>
 		

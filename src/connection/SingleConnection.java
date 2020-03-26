@@ -14,9 +14,9 @@ import  java.sql.Connection ;
 
 public class SingleConnection {
 	
-	private static String banco ="jdbc:postgresql://ec2-3-229-210-93.compute-1.amazonaws.com/dchrveno561m7a?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
-	private static String user="mjrgqwitjntgmh";
-	private static String password="16a95989fee677bb1dae363f4c660d55634d01820475d1ec2eccf89cadc244b7";
+	private static String banco ="jdbc:postgresql://ec2-18-209-187-54.compute-1.amazonaws.com/dbh22hbj33snm7?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+	private static String user="ozacegeafmmqic";
+	private static String password="f657e377e4e25e898d209eadfe0dd1f550d28727f5074244dafd88b65b560594";
 	
 	private static Connection connection = null;
 	
