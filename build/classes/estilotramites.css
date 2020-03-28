@@ -1,14 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 
 
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
 body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
-	/*background:url('../img/fondo.jpg') no-repeat 0 -200px;*/
+	background:url('../img/backTopTra.png') no-repeat 0 -200px;
+	background-position: 0px 0px;
 	
+	
+	
+
 
 }
 
@@ -26,7 +30,7 @@ margin:auto;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #6a2cf3;
+	background-color: #5900ee;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.7s;
@@ -58,7 +62,7 @@ margin:auto;
 	font-size: 30px
 }
 .slide a {
-	color: #afb4c6;
+	color: #FFF;
 	font-size: 36px;
 }
 #content {
@@ -84,18 +88,23 @@ body
 
 .sub-titulo
 {
-	width:100%;
-	height:15%:
-	font-family: 'Montserrat', sans-serif;
-	font-size: 24px;
+	width:630px;
+	height:auto;
+	font-size:32px;
+	font-family: 'Baloo Thambi 2', cursive;
+	text-align:left;
 	padding-top:40px;
-	color:#565454;
-	text-align: center;
+	color:#232323;
+	margin: auto;
+	justify-content: center;
+	
+	
 }
 
 .rectangulo {
    
-     background: #edf0f5;
+     background: #f4f4f6;
+     width: 50px;
 }
 
 .rectangulo h3 {
@@ -123,7 +132,7 @@ h1{
  
   .card  {
     padding: 40px;
-    background: #fff;
+    background: #161516;
     max-width: 560px;
     border-radius: 20px;
     margin: 15px auto;
@@ -209,9 +218,8 @@ select{
 	height: 100px;
 }
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
--webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
--moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+color:white;
+font-weight:bold;
 display:block;
 width:100%;
 padding:10px;
@@ -219,14 +227,14 @@ box-sizing:border-box;
 margin:2px solid #ccc;
 border-radius: 25px;
 outline: none;
-color:white;
-background-color:#8600f6;
-box-shadow: none;
+background-color:#7f38fc;
+padding:5px;
+border:2px solid #fff; 
+-webkit-border-radius: 25px;
+    border-radius: 25px;
 }
 .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
--webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
--moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+
 display:block;
 width:100%;
 padding:10px;
@@ -234,9 +242,12 @@ box-sizing:border-box;
 margin:2px solid #ccc;
 border-radius: 25px;
 outline: none;
-color:white;
-background-color:#8600f6;
-box-shadow: none;
+background-color:#7f38e6;
+padding:5px;
+ border:2px solid #fff; 
+-webkit-border-radius: 25px;
+    border-radius: 25px;
+
 }
 .form-style-1 .required{
 	color:red;
@@ -268,22 +279,35 @@ input[type="file"] {
 
 
 .custom-file-upload {
+	font-size:10px;
+	width:95%;
     border: 1px solid #ccc;
     display: inline-block;
-    padding: 6px 12px;
+    
+    padding:5px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 25px;
+    margin:auto;
 }
 
 
 .container {
   margin: 5% 3%;
 }
+
+
+
+
+
 @media (min-width: 48em) {
   .container {
     margin: 2%;
   }
 }
+
+
+
+
 @media (min-width: 75em) {
   .container {
     margin: 2em auto;
@@ -297,7 +321,7 @@ input[type="file"] {
   margin-bottom: 1.5em;  
   border-spacing: 1; 
   border-collapse: collapse; 
-  background:white;
+  background:white;  
   border-radius:10px;
   overflow:hidden;
   max-width:1800px; 
@@ -305,6 +329,8 @@ input[type="file"] {
   margin:0 auto;
   position:relative;
   color:#838383;
+  
+  
 
   *               { position:relative }
   
@@ -360,10 +386,11 @@ input[type="file"] {
   }
 }
 .responsive-table thead th {
-  background-color: #7d2fef;
+  background-color: #4738F6;
   font-weight: bold;
   text-align: center;
   color: white;
+  
   
 }
 
@@ -382,6 +409,7 @@ input[type="file"] {
   padding: 0;
   text-align: left;
   white-space: normal;
+  
   
   
 }
@@ -416,11 +444,17 @@ input[type="file"] {
   }
 }
 .responsive-table caption {
-  margin-bottom: 1em;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  color:#565454;
+	
+	height:auto;
+	font-size:32px;
+	font-weight:bold;
+	font-family: 'Baloo Thambi 2', cursive;
+	text-align:left;
+	padding-top:40px;
+	padding-bottom:20px;
+	color:#232323;
+	margin: auto;
+	justify-content: center;	
 }
 @media (min-width: 48em) {
   .responsive-table caption {
@@ -453,7 +487,7 @@ input[type="file"] {
 }
 @media (min-width: 48em) {
   .responsive-table tbody tr:nth-of-type(even) {
-    background-color: rgba(249, 244, 255, 1);
+    background-color: rgba(71, 56, 246, 0.15);
     color:#838383;
     font-weight: bold;
   }
@@ -485,6 +519,15 @@ input[type="file"] {
 
 
 @media (max-width: 30em) {/* 30x16px=480px*/
+
+
+body {
+    background-attachment:url('../img/backTopTra760.png') no-repeat 0 -200px;
+	
+   back
+     
+ }
+
     .responsive-table{
         width: 100%;
         font-size: .9em;
@@ -504,6 +547,25 @@ input[type="file"] {
        
         
     }
+    
+        .responsive-table td[data-titulo]  .mini {
+        margin:left;
+		width:40%;
+		height:80%;
+		 
+       
+        
+    }
+    
+    
+	.responsiveDoc
+    {
+   display: flex;
+   justify-content: left;
+   align-items: left;
+    }
+    
+
 
     .responsive-table td,
     .responsive-table th{
@@ -514,7 +576,7 @@ input[type="file"] {
     .responsive-table td[data-titulo]::before{
         content: attr(data-titulo);
         width: 90px;
-        color: black;
+        
         font-weight: Bold;
         text-align:left;
 		padding-top:4px;
@@ -530,7 +592,6 @@ input[type="file"] {
         display: none;
     }
 }
-
 
 
 

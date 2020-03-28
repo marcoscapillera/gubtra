@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
+
+body {
+	font-family: 'Baloo Thambi 2', cursive;
+	overflow-x: hidden;
+	background:url('../img/backTop.png') no-repeat 0 -200px;
+	background-position: 0px 0px;
+	
+	
+
+}
+
+#tramites
+
+{
+	
+	
+}
+
+ /* styling navlist */ 
+    #navlist { 
+        background-color: #6532FC; 
+        position: absolute;
+        margin-right:20px; 
+        width: 98%;     
+    	/*box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.5);*/
+    	border-radius: 10px;
+    	
+ 
+    } 
+          
+    /* styling navlist anchor element */ 
+    #navlist a { 
+        float:left; 
+        display: block; 
+        color: #fff; 
+        text-align: center; 
+        padding: 12px; 
+        text-decoration: none; 
+        font-size: 15px; 
+        font-weight: bold;
+    } 
+      
+    .navlist-center{ 
+        float:center; 
+    } 
+  
+    /* hover effect of navlist anchor element */ 
+    #navlist a:hover { 
+        background-color: #f5f5f5; 
+        color: black; 
+    } 
+          
+    /* styling search bar */ 
+    .search input[type=text]{ 
+        width:300px; 
+        height:25px; 
+        border-radius:25px; 
+        border: none; 
+    } 
+          
+    .search{ 
+        float:right; 
+        margin:7px; 
+    } 
+          
+    .search button{ 
+        background-color: #6532FC; 
+        color: #f5f5f5; 
+        float: right; 
+        padding: 5px 10px; 
+        margin-right: 16px; 
+        font-size: 12px; 
+        border: none; 
+        cursor: pointer; 
+    }  
+
+
+
+#img
+{
+	
+display:block;
+margin:auto;
+	
+}
+.nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #5900ee;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.7s;
+}
+.nav a {
+	display: block;
+	padding: 20px 30px;
+	font-size: 24px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+.nav a:hover {
+	color:#fff;
+	background-color: #7b5ef2;
+	transition: 0.4s;
+	
+}
+.nav .close {
+	position: absolute;
+	top: 0;
+	right: 22px;
+	margin-left: 50px;
+	font-size: 30px;
+	
+	background-color: #ff4926;
+}
+.slide a {
+	color: #afb4c6;
+	font-size: 36px;
+}
+#content {
+	padding: 20px;
+	transition: margin-left 0.7s;
+	overflow: hidden;
+	width: 100%;
+}
+#home
+{
+
+	
+	
+
+}
+

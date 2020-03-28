@@ -11,7 +11,7 @@
 <title>GubTra</title>
 <script defer
 	src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-<link rel="stylesheet" href="resources/css/estilohome.css">
+<link rel="stylesheet" href="resources/css/estilodocumentos.css">
 <script>
   function openSlideMenu(){
     document.getElementById('menu').style.width = '250px';
@@ -26,7 +26,7 @@
 <body>
 
 	<div id="content">
-
+		
 		<span class="slide"> <a href="#" onclick="openSlideMenu()">
 				<i class="fas fa-bars"></i>
 		</a>
@@ -35,17 +35,18 @@
 		<div id="menu" class="nav">
 			<a href="#" class="close" onclick="closeSlideMenu()"> <i
 				class="fas fa-times"></i>
+				
 			</a> <br><br><img id="img" alt="" src="resources/img/logoSello.png" width=150px height=48px> 
 				<a href="index.jsp">Home</a>
 				<a href="#about">About</a>
 				<a href="salvarTramites?accion=listartodos">Trámites</a>
 			 	<a href="#facturas">Facturas</a> 
-			 	<a href="#documentos">Documentos</a> 
+			 	<a href="salvarDocumento?accion=listartodos">Documentos</a> 
 				<a href="#arhivos">Archivos</a>
 		</div>
 
 		
-		<section id="tramites">
+		<section id="documentos">
 		<br>
 		
 			<jsp:include page="tramites.jsp"></jsp:include>
