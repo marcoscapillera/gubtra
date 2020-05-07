@@ -7,7 +7,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
-	background:url('../img/backTopTra.png') no-repeat 0 -200px;
+	background:url('../img/backTop.png') no-repeat 0 -200px;
 	background-position: 0px 0px;
 	
 	
@@ -30,7 +30,7 @@ margin:auto;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #5900ee;
+	background-color: #3152ff;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.7s;
@@ -521,12 +521,7 @@ input[type="file"] {
 @media (max-width: 30em) {/* 30x16px=480px*/
 
 
-body {
-    background-attachment:url('../img/backTopTra760.png') no-repeat 0 -200px;
-	
-   back
-     
- }
+
 
     .responsive-table{
         width: 100%;

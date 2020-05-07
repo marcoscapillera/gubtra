@@ -40,7 +40,17 @@
 				<a href="index.jsp">Home</a>
 				<a href="#about">About</a>
 				<a href="salvarTramites?accion=listartodos">Trámites</a>
-			 	<a href="#facturas">Facturas</a> 
+			 	<a href="#facturas">Facturas</a> <p style="float: right;	border-radius: 50%;
+					background: red;
+					width:20px;
+					height:20px;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+  					 margin:0px auto;
+  					color:white;
+ 					padding:3%">
+ 					<% out.print(request.getAttribute("conteoDoc")); %></p>
 			 	<a href="#salvarDocumento?accion=listartodos">Documentos</a> 
 				<a href="#arhivos">Archivos</a>
 		</div>

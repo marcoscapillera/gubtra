@@ -6,10 +6,7 @@ public class BeanCursoJsp {
 	private String login;
 	private String pass;
 	private String name;
-	
-	
-	
-	
+
 	
 	public void setName(String name) {
 		this.name = name;

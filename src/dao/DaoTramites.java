@@ -22,6 +22,8 @@ public class DaoTramites {
 
 	public void salvar(BeanTramites tramites) {
 		System.out.println("entro salvar");
+	
+		
 
 		try {
 
@@ -39,6 +41,11 @@ public class DaoTramites {
 			insert.execute();
 			connection.commit();
 			System.out.println("Todo correcto, salvando datos");
+			
+			int conteo= contarTramites();
+			System.out.println("hay" + conteo);
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,6 +82,7 @@ public class DaoTramites {
 			beanTramites.setContentType(resultSet.getString("contenttype"));
 			
 			
+			
 
 			listar.add(beanTramites);
 		}
@@ -93,6 +101,8 @@ public class DaoTramites {
 			connection.commit();
 
 			System.out.println("Borro id");
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -114,6 +124,7 @@ public class DaoTramites {
 	public BeanTramites consultar(String id) throws Exception {
 
 		String sql = "select * from tramites where id = '" + id + "' ";
+		
 
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		ResultSet resultSet = preparedStatement.executeQuery();
@@ -129,6 +140,8 @@ public class DaoTramites {
 			beanTramites.setDir(resultSet.getString("direccion"));
 			beanTramites.setFotoBase64(resultSet.getString("fotobase64"));
 			beanTramites.setContentType(resultSet.getString("contenttype"));
+			
+			
 			
 
 
@@ -157,6 +170,7 @@ public class DaoTramites {
 
 			System.out.println("actualizo");
 
+
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -172,6 +186,22 @@ public class DaoTramites {
 
 		}
 
+	}
+	
+	
+	public int contarTramites() throws Exception {
+		
+		int conteo= 0;
+		String sql = "select count(*) from tramites";
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		if (resultSet.next()) {
+
+			conteo = resultSet.getInt(1);
+		}
+
+		return conteo;
 	}
 	
 

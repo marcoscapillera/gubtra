@@ -20,7 +20,7 @@ body {
 
  /* styling navlist */ 
     #navlist { 
-        background-color: #6532FC; 
+        background-color: #3103ec; 
         position: absolute;
         margin-right:20px; 
         width: 98%;     
@@ -92,7 +92,7 @@ margin:auto;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #5900ee;
+	background-color: #3152ff;
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.7s;

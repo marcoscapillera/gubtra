@@ -165,6 +165,22 @@ public class DaoDocumento {
 
 	}
 	
+	public int contarDocumentos() throws Exception {
+		
+		int conteo= 0;
+		String sql = "select count(*) from documento";
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet = preparedStatement.executeQuery();
+
+		if (resultSet.next()) {
+
+			conteo = resultSet.getInt(1);
+		}
+
+		return conteo;
+	}
+	
+	
 
 
 }

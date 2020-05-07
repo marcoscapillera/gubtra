@@ -54,6 +54,11 @@ public class tramites extends HttpServlet {
 				request.setAttribute("usuarios", daoTramites.listar());
 
 				view.forward(request, response);
+				
+				/*Burbuja de conteo de tramites*/
+				int conteo= daoTramites.contarTramites();
+				request.setAttribute("conteo",conteo);
+
 
 			}
 
@@ -62,22 +67,41 @@ public class tramites extends HttpServlet {
 				BeanTramites beantramites = daoTramites.consultar(user);
 
 				RequestDispatcher view = request.getRequestDispatcher("/homeTramites.jsp");
+				
 				request.setAttribute("user", beantramites);
 				view.forward(request, response);
+				
+				/*Burbuja de conteo de tramites*/
+				int conteo= daoTramites.contarTramites();
+				request.setAttribute("conteo",conteo);
 
 			} else if (accion.equalsIgnoreCase("listartodos")) {
 
 				RequestDispatcher view = request.getRequestDispatcher("/homeTramites.jsp");
+				
+
+				
 				request.setAttribute("usuarios", daoTramites.listar());
+				
+				/*Burbuja de conteo de tramites*/
+				int conteo= daoTramites.contarTramites();
+				request.setAttribute("conteo",conteo);
 
 				view.forward(request, response);
+				
+				
+
 
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		
+		
 
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -97,6 +121,12 @@ public class tramites extends HttpServlet {
 				RequestDispatcher view = request.getRequestDispatcher("/homeTramites.jsp");
 				request.setAttribute("usuarios", daoTramites.listar());
 				view.forward(request, response);
+				
+				
+				/*Burbuja de conteo de tramites*/
+				int conteo= daoTramites.contarTramites();
+				request.setAttribute("conteo",conteo);
+
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -150,9 +180,14 @@ public class tramites extends HttpServlet {
 
 				if (id == null || id.isEmpty()) {
 					daoTramites.salvar(tramites);
+					int conteo= daoTramites.contarTramites();
+					request.setAttribute("conteo",conteo);
+				
 
 				} else {
 					daoTramites.actualizar(tramites);
+					int conteo= daoTramites.contarTramites();
+					request.setAttribute("conteo",conteo);
 				}
 
 				RequestDispatcher view = request.getRequestDispatcher("/homeTramites.jsp");

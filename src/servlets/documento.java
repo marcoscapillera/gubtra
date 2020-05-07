@@ -1,8 +1,10 @@
 package servlets;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -35,7 +37,7 @@ public class documento extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		System.out.println("accion");
 
@@ -55,6 +57,10 @@ public class documento extends HttpServlet {
 				request.setAttribute("usuarios", daoDocumento.listar());
 
 				view.forward(request, response);
+				
+				/*Burbuja de conteo de Documentos*/
+				int conteo= daoDocumento.contarDocumentos();
+				request.setAttribute("conteoDoc",conteo);
 
 			}
 
@@ -65,14 +71,47 @@ public class documento extends HttpServlet {
 				RequestDispatcher view = request.getRequestDispatcher("/homeDocumentos.jsp");
 				request.setAttribute("user", beanDocumento);
 				view.forward(request, response);
+				
+				/*Burbuja de conteo de Documentos*/
+				int conteo= daoDocumento.contarDocumentos();
+				request.setAttribute("conteoDoc",conteo);
 
 			} else if (accion.equalsIgnoreCase("listartodos")) {
 
 				RequestDispatcher view = request.getRequestDispatcher("/homeDocumentos.jsp");
 				request.setAttribute("usuarios", daoDocumento.listar());
-
+				
+				/*Burbuja de conteo de Documentos*/
+				int conteo= daoDocumento.contarDocumentos();
+				request.setAttribute("conteoDoc",conteo);
+				
 				view.forward(request, response);
 
+			}else if(accion.equalsIgnoreCase("download")) {
+				BeanDocumento  documento= daoDocumento.consultar(user);
+				if(documento != null) {
+					response.setHeader("Content-Disposition", "attachment;filename= Documento."+ documento.getContentType().split("\\/")[1]);
+					
+					/*Convertor de base64 de imagen del banco para byte[]*/
+					byte[] imageFotoBytes= new Base64().decodeBase64(documento.getFotoBase64());
+					
+					/*Coloca los  bytes en un objeto de entrada para procesar*/
+					InputStream is = new ByteArrayInputStream(imageFotoBytes);
+					
+					/*Inicio de la respuesta para el navegador*/
+					int read=0;
+					byte[] bytes = new byte[1024];
+					OutputStream os =  response.getOutputStream();
+					
+					
+					
+					while((read = is.read(bytes)) != -1) {
+						os.write(bytes,0,read);
+					}
+					
+					os.flush();
+					os.close();
+				}
 			}
 
 		} catch (Exception e) {
@@ -98,6 +137,11 @@ public class documento extends HttpServlet {
 				RequestDispatcher view = request.getRequestDispatcher("/homeDocumentos.jsp");
 				request.setAttribute("usuarios", daoDocumento.listar());
 				view.forward(request, response);
+				
+				
+				/*Burbuja de conteo de Documentos*/
+				int conteo= daoDocumento.contarDocumentos();
+				request.setAttribute("conteoDoc",conteo);
 
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -147,9 +191,15 @@ public class documento extends HttpServlet {
 
 				if (!(numero_documento == null)) {
 					daoDocumento.salvar(documento);
+					
+					int conteo= daoDocumento.contarDocumentos();
+					request.setAttribute("conteoDoc",conteo);
 
 				} else {
 					daoDocumento.actualizar(documento);
+					
+					int conteo= daoDocumento.contarDocumentos();
+					request.setAttribute("conteoDoc",conteo);
 				}
 
 				RequestDispatcher view = request.getRequestDispatcher("/homeDocumentos.jsp");

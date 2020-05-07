@@ -132,24 +132,10 @@
 		<tbody >
 		<c:forEach items="${usuarios}" var="user">
 			<tr >
-				
-					<!-- Se crea una linea para cada registro -->
-					<td data-titulo="Número">
-						<!-- Se crea un celda para cada registro--> <c:out value="${user.numdocumento}"></c:out> <!-- Tag c:out imprime en pantalla el valor pasado en expression language -->
-					</td>
-
-					<td data-titulo="Nombre">
-						<!-- Se crea un celda para cada registro --> <c:out value="${user.nombredocumento}"></c:out> <!-- Tag c:out Tag c:out imprime en pantalla el valor pasado en expression language -->
-					</td>
-					
-					<td data-titulo="Validez">
-						<!-- Se crea un celda para cada registro --> <c:out value="${user.validez}"></c:out> <!-- Tag c:out Tag c:out imprime en pantalla el valor pasado en expression language -->
-					</td>
-									
-					<td class="responsiveDoc" data-titulo="Documento">
-						<!--Se crea un celda para cada registro --><img  class="mini"  style="border-radius: 10px" src='<c:out value="${user.tempFotoDocumento }"></c:out>'  width=50% height=% > <!--  Tag c:out Tag c:out imprime en pantalla el valor pasado en expression language-->
-					</td>
-
+				<td data-titulo="Número"><c:out value="${user.numdocumento}"></c:out> </td>
+				<td data-titulo="Nombre"><c:out value="${user.nombredocumento}"></c:out> </td>
+				<td data-titulo="Validez"><c:out value="${user.validez}"></c:out> </td>
+				<td class="responsiveDoc" data-titulo="Documento"><a  href="salvarDocumento?accion=download&user=${user.numdocumento }"><img  class="mini"  style="border-radius: 10px" src='<c:out value="${user.tempFotoDocumento }"></c:out>' alt="Imagen Documento" title="Click para descargar Documento" width=50% height=% > </a></td>
 				<td data-titulo="Borrar" style="width: 150px"><a href="salvarDocumento?accion=delete&user=${user.numdocumento }"><img src="resources/img/btn_excluir.png" alt="Delet" title="Delete"width=20px height=20px ></a></td>
 				<td data-titulo="Editar"style="width: 150px"><a href="salvarDocumento?accion=edit&user=${user.numdocumento }"><img src="resources/img/btn_edit.png" alt ="Editar" title="Edit"width=20px height=20px ></a></td>
 			</tr>
